@@ -1,10 +1,10 @@
 package org.example.assignment;
 
-public class Divide {
+public class Divide2num {
     private int dividend;
     private int divisor;
 
-    public Divide(int dividend, int divisor){
+    public Divide2num (int dividend, int divisor){
         this.dividend=dividend;
         this.divisor=divisor;
     }
