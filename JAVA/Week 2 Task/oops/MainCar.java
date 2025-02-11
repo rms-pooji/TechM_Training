@@ -2,7 +2,7 @@ package org.example.assignment.oopeg;
 
 import java.util.ArrayList;
 
-public class Mainc {
+public class MainCar {
     public static void main(String[] args){
         ArrayList<Car> cars= new ArrayList<>();
 
