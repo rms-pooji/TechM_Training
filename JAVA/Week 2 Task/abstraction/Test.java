@@ -1,6 +1,6 @@
 package org.example.assignment.abstracteg;
 
-public class Testm {
+public class Test {
     public static void main(String[] args){
         Dog d=new Dog();
         Cat c=new Cat();
