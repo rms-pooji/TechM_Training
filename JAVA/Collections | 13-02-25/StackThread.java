@@ -1,3 +1,4 @@
+package collections;
 import java.util.Stack;
 
 public class StackThread extends Thread {
