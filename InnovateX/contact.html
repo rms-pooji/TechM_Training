@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - InnovateX</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, rgba(125, 144, 205, 0.9), rgba(255, 176, 102, 0.7));
+            color: #333;
+        }
+
+
+        header {
+            background-color: #140539;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+        }
+
+        nav ul li a:hover {
+            background-color: #fff;
+            color: #140539;
+            border-radius: 5px;
+        }
+
+        section#contact {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section#contact h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: #140539;
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        form button {
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #140539;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #2a086f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #140539;
+            color: #fff;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form" onsubmit="return validateCaptcha()">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <!-- CAPTCHA Section -->
+            <div style="margin-top: 20px; text-align: left;">
+                <label for="captcha">What is <span id="num1"></span> + <span id="num2"></span>?</label>
+                <input type="number" id="captcha" name="captcha" placeholder="Your Answer" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 InnovateX. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const num1 = Math.floor(Math.random() * 10) + 1;
+        const num2 = Math.floor(Math.random() * 10) + 1;
+        document.getElementById('num1').textContent = num1;
+        document.getElementById('num2').textContent = num2;
+
+        function validateCaptcha() {
+            const userAnswer = parseInt(document.getElementById('captcha').value);
+            if (userAnswer !== num1 + num2) {
+                alert('Incorrect CAPTCHA answer. Please try again.');
+                return false; // Prevent form submission
+            }
+            alert('Form submitted successfully!');
+            return true; // Allow form submission
+        }
+    </script>
+
+</body>
+
+</html>
