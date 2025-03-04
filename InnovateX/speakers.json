@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Dr. Emily Carter",
+        "title": "AI Research Scientist",
+        "bio": "Dr. Carter leads groundbreaking research in machine learning and its applications across industries.",
+        "image": "images/emily_carter.jpg"
+    },
+    {
+        "name": "Mr. John Doe",
+        "title": "Blockchain Innovator",
+        "bio": "John specializes in decentralized technologies and has built several award-winning platforms.",
+        "image": "images/john_doe.jpg"
+    },
+    {
+        "name": "Ms. Sarah Lee",
+        "title": "Cybersecurity Expert",
+        "bio": "Sarah has over a decade of experience in securing digital infrastructures worldwide.",
+        "image": "images/sarah_lee.jpg"
+    },
+    {
+        "name": "Mr. Carlos Ramirez",
+        "title": "Tech Entrepreneur",
+        "bio": "Carlos is the founder of multiple startups focusing on smart city innovations.",
+        "image": "images/carlos_ramirez.jpg"
+    }
+]
