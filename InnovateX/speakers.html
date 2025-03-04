@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX - Speakers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #9faedb;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .back-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #333;
+        }
+        section#speakers {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        section#speakers h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        #speakers-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .speaker-card {
+            background-color: #f0f5f7;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .speaker-card:hover {
+            transform: translateY(-5px);
+        }
+        .speaker-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .speaker-card h3 {
+            margin: 15px 0 5px;
+            font-size: 1.4rem;
+            color: #140539;
+        }
+        .speaker-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #140539;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button class="back-btn" onclick="window.location.href='index.html'">&larr;</button>
+    </header>
+
+    <section id="speakers">
+        <h2>Meet Our Speakers</h2>
+        <div id="speakers-list"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 InnovateX. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fetching speaker data from JSON
+        fetch('speakers.json')
+            .then(response => response.json())
+            .then(speakers => {
+                const speakersList = document.getElementById('speakers-list');
+                speakers.forEach(speaker => {
+                    speakersList.innerHTML += `
+                        <div class="speaker-card">
+                            <img src="${speaker.image}" alt="${speaker.name}">
+                            <h3>${speaker.name}</h3>
+                            <p><strong>${speaker.title}</strong></p>
+                            <p>${speaker.bio}</p>
+                        </div>
+                    `;
+                });
+            })
+            .catch(error => console.error('Error loading speakers:', error));
+    </script>
+
+</body>
+</html>
