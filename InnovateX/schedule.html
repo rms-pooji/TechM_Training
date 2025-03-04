@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX - Schedule</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #140539, #2b0a67);
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Back Button */
+        .back-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #ffcc00;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            font-size: 2.5rem;
+        }
+
+        #track-filter {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: none;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        #schedule-list {
+            margin-top: 30px;
+        }
+
+        .session {
+            padding: 15px;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .session-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .session h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #ffcc00;
+        }
+
+        .track {
+            background-color: #474a13;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #fff;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .session p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back button -->
+    <button class="back-btn" onclick="window.location.href='index.html'">&larr;</button>
+
+    <h2>Conference Schedule</h2>
+
+    <!-- Track Filter -->
+    <select id="track-filter">
+        <option value="All">All Tracks</option>
+        <option value="AI">AI</option>
+        <option value="Blockchain">Blockchain</option>
+        <option value="Cloud">Cloud</option>
+        <option value="Cybersecurity">Cybersecurity</option>
+    </select>
+
+    <!-- Schedule List -->
+    <div id="schedule-list"></div>
+
+    <footer>
+        &copy; 2025 InnovateX. All rights reserved.
+    </footer>
+
+    <script>
+        const sessions = [
+            { title: "AI in Healthcare", track: "AI", time: "10:00 AM", date: "March 10, 2025" },
+            { title: "Blockchain for Business", track: "Blockchain", time: "11:00 AM", date: "March 10, 2025" },
+            { title: "Scaling with Cloud", track: "Cloud", time: "12:00 PM", date: "March 10, 2025" },
+            { title: "Ethical AI", track: "AI", time: "1:00 PM", date: "March 11, 2025" },
+            { title: "Smart Contracts Deep Dive", track: "Blockchain", time: "2:00 PM", date: "March 11, 2025" },
+            { title: "Cloud Security Essentials", track: "Cloud", time: "3:00 PM", date: "March 11, 2025" },
+            { title: "Future of Cybersecurity", track: "Cybersecurity", time: "10:30 AM", date: "March 12, 2025" },
+            { title: "AI-Powered Automation", track: "AI", time: "1:00 PM", date: "March 12, 2025" },
+            { title: "Zero Trust Security Model", track: "Cybersecurity", time: "3:00 PM", date: "March 13, 2025" },
+            { title: "Blockchain Beyond Crypto", track: "Blockchain", time: "4:00 PM", date: "March 13, 2025" }
+        ];
+
+        const scheduleList = document.getElementById('schedule-list');
+        const filterSelect = document.getElementById('track-filter');
+
+        function displaySessions(track) {
+            scheduleList.innerHTML = '';
+            const filteredSessions = track === "All" ? sessions : sessions.filter(session => session.track === track);
+
+            if (filteredSessions.length === 0) {
+                scheduleList.innerHTML = `<p>No sessions available for the selected track.</p>`;
+                return;
+            }
+
+            filteredSessions.forEach(session => {
+                const sessionDiv = document.createElement('div');
+                sessionDiv.className = 'session';
+                sessionDiv.innerHTML = `
+                    <div class="session-header">
+                        <h3>${session.title}</h3>
+                        <span class="track">${session.track}</span>
+                    </div>
+                    <p><strong>Time:</strong> ${session.time}</p>
+                    <p><strong>Date:</strong> ${session.date}</p>
+                `;
+                scheduleList.appendChild(sessionDiv);
+            });
+        }
+
+        filterSelect.addEventListener('change', () => {
+            displaySessions(filterSelect.value);
+        });
+
+        // Initial load
+        displaySessions('All');
+    </script>
+
+</body>
+</html>
