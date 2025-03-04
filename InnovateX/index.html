@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovateX Tech Conference</title>
+    <style>
+        /* Full-page layout */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            padding-top: 50px; /* Add padding to push content slightly down */
+            background-image: url('assets_logo.png'); /* Make sure the path is correct */
+            background-size: cover; /* Ensure the image covers the entire page */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Keep the background fixed during scrolling */
+            color: rgb(231, 226, 226); /* Set the text color */
+        }
+
+        /* Main container for the 4 buttons */
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+            padding: 20px;
+            border-radius: 10px;
+            width: 95%; /* Increased container width */
+            max-width: 1000px; /* Increased max-width for better layout */
+            margin-bottom: 100px; /* Space for the register button */
+        }
+
+        /* Flexbox container for buttons */
+        .button-container {
+            display: flex;
+            justify-content: space-evenly; /* Space buttons evenly */
+            gap: 10px; /* Reduced gap between buttons */
+            flex-wrap: wrap; /* Allow buttons to wrap if needed */
+        }
+
+        /* Button style */
+        .btn {
+            background-color: #33198a;
+            color: white;
+            padding: 10px 20px; /* Smaller padding */
+            font-size: 1rem; /* Smaller font size */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            width: 120px; /* Set width for buttons */
+            text-align: center; /* Center text in buttons */
+        }
+
+        .btn:hover {
+            background-color: #45444d;
+        }
+
+        /* Register Button with unique color */
+        .register-btn {
+            background: rgba(0, 0, 0, 0.7); /* Unique color for the Register button */
+            color: white;
+            font-size: 1.2rem; /* Slightly smaller font size */
+            font-weight: bold;
+            padding: 12px 30px; /* Reduced padding */
+            margin-top: 20px; /* Push the register button below the other buttons */
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            width: 100px; /* Set width for the register button */
+            position: fixed; /* Fixed position to stay at the top-right */
+            top: 20px; /* 20px from the top of the page */
+            right: 20px; /* 20px from the right side */
+        }
+
+        .register-btn:hover {
+            background-color: #2b0876; /* Slightly darker shade on hover */
+        }
+
+        /* Header */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* Media Query for smaller screens */
+        @media (max-width: 768px) {
+            .button-container {
+                flex-direction: column; /* Stack buttons vertically on smaller screens */
+                align-items: center; /* Center buttons */
+            }
+
+            .btn {
+                width: 100%; /* Make buttons full width on small screens */
+                margin-bottom: 10px; /* Space between buttons */
+            }
+
+            .register-btn {
+                width: 100px; /* Smaller width on mobile */
+                top: 10px; /* Adjust register button position on small screens */
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Register Button Positioned Outside the Container (Top-right) -->
+    <a href="register.html" class="register-btn">Register</a>
+
+    <!-- Main Container for Buttons -->
+    <div class="container">
+        <h1>Welcome to InnovateX</h1>
+
+        <!-- Flexbox container for the 4 buttons -->
+        <div class="button-container">
+            <a href="about.html" class="btn">About</a>
+            <a href="schedule.html" class="btn">Schedule</a>
+            <a href="speakers.html" class="btn">Speakers</a>
+            <a href="contact.html" class="btn">Contact</a>
+        </div>
+    </div>
+</body>
+</html>
