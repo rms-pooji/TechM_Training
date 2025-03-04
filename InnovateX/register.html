@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register for InnovateX</title>
+    <style>
+        /* Full-page layout */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            padding-top: 50px; /* Add padding to push content slightly down */
+            background-image: url('assets_logo.png'); /* Make sure the path is correct */
+            background-size: cover; /* Ensure the image covers the entire page */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Keep the background fixed during scrolling */
+            color: rgb(231, 226, 226); /* Set the text color */
+        }
+
+        /* Main container */
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+            padding: 30px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        /* Form input styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            padding: 12px;
+            font-size: 1rem;
+            width: 80%;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 15px 30px;
+            background-color: #33198a;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .back-btn {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #ff6f61;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
+
+        .back-btn:hover {
+            background-color: #e55a47;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register for InnovateX</h1>
+        <form action="submit_registration.php" method="POST">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Create Password" required>
+            <input type="submit" value="Register">
+        </form>
+        <a href="index.html" class="back-btn">Back to Home</a> <!-- Back to Home Button -->
+    </div>
+</body>
+</html>
