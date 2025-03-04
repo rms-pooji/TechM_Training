@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About InnovateX</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f6f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            height: 100%; /* Full page height */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Start content from top */
+        }
+
+        header {
+            background-color: transparent; /* No background for header */
+            padding: 10px 20px;
+            text-align: center;
+            position: absolute;
+            top: 10px; /* Adjust top position */
+            left: 10px; /* Align to left */
+            z-index: 10; /* Keep it above the content */
+        }
+
+        .back-btn {
+            background-color: transparent; 
+            color: #040404;
+            border: none;
+            font-size: 2rem; /* Increased font size for the arrow */
+            font-weight: bold; /* Increased thickness of the arrow */
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            color: #ff6f61; /* Change color on hover */
+        }
+
+        section#about {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns layout */
+            gap: 10px; /* Reduced gap between columns */
+            padding: 20px 15px; /* Further reduced padding to compress content */
+            background: linear-gradient(135deg, rgba(125, 144, 205, 0.9), rgba(255, 176, 102, 0.7));
+            border-radius: 10px;
+            margin: 40px auto; /* Reduced margin for more compact layout */
+            max-width: 1200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 90%; /* Full width with margins */
+            height: calc(100% - 120px); /* Adjusted to allow space for the back button */
+            position: relative;
+        }
+
+        /* Section heading style */
+        section#about h2 {
+            font-size: 2rem; /* Slightly smaller heading */
+            color: #f5f0f0;
+            text-align: center;
+            margin-bottom: 8px; /* Reduced margin for compactness */
+            grid-column: span 2; /* This makes the heading span both columns */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        section#about h3 {
+            font-size: 1.5rem; /* Reduced size of sub-headings */
+            margin-top: 10px; /* Reduced space above sub-headings */
+            color: #140539;
+            border-bottom: 2px solid #ff6f61;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        section#about p {
+            font-size: 1rem; /* Reduced font size for better space management */
+            line-height: 1.3; /* Reduced line height to decrease gaps */
+            margin-bottom: 6px; /* Reduced margin between paragraphs */
+            color: #080808;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #140539; /* Dark background for footer */
+            color: #fff;
+            padding: 20px 0; /* Padding for better spacing */
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-top: 2px solid #ff6f61; /* Add a border to make it stand out */
+        }
+
+        footer p {
+            font-size: 1.2rem; /* Slightly larger font for better readability */
+            margin: 0;
+            font-weight: bold; /* Make the footer text bolder */
+        }
+
+        footer a {
+            color: #ff6f61; /* Add a hover effect color */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section#about {
+                grid-template-columns: 1fr; /* Stack the columns on smaller screens */
+                padding: 20px 15px;
+            }
+
+            section#about h2 {
+                font-size: 1.8rem;
+            }
+
+            section#about h3 {
+                font-size: 1.4rem;
+            }
+
+            section#about p {
+                font-size: 1rem;
+            }
+
+            .back-btn {
+                font-size: 1.8rem; /* Adjust arrow button size for smaller screens */
+                padding: 8px 15px;
+            }
+
+            footer p {
+                font-size: 1rem; /* Smaller footer text on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Back button as an arrow symbol -->
+        <button class="back-btn" onclick="window.location.href='index.html'">&larr;</button>
+    </header>
+
+    <section id="about">
+        <h2>About InnovateX</h2>
+        <!-- Left Column -->
+        <div>
+            <p>The annual InnovateX conference brings together leading technology professionals, innovators, and experts to explore the latest trends and breakthroughs in the tech industry. InnovateX is a platform designed to foster creativity, inspire new ideas, and spark conversations that will shape the future of technology.</p>
+            
+            <h3>Our Mission</h3>
+            <p>At InnovateX, our mission is to provide a space where industry leaders, visionaries, and change-makers can exchange knowledge, share experiences, and collaborate on future projects. Our goal is to empower attendees with the tools, insights, and networks needed to drive innovation in the tech world.</p>
+            
+            <h3>What to Expect</h3>
+            <p>During the conference, attendees can expect keynote speeches from top industry professionals, hands-on workshops, and panel discussions on cutting-edge topics. From artificial intelligence and blockchain to sustainable tech and entrepreneurship, InnovateX covers a wide range of subjects that are shaping the future of technology.</p>
+        </div>
+        
+        <!-- Right Column -->
+        <div>
+            <h3>Networking Opportunities</h3>
+            <p>InnovateX is not only about learning but also about connecting. Whether you're looking to expand your professional network, collaborate with like-minded individuals, or meet potential partners, InnovateX offers numerous opportunities to interact with fellow attendees and experts.</p>
+            
+            <h3>Join Us</h3>
+            <p>Be part of a dynamic community that's shaping the future of technology. Join us at InnovateX to gain fresh insights, collaborate with industry pioneers, and take your ideas to the next level. Whether you're a seasoned professional or an emerging innovator, InnovateX is the place to connect, learn, and inspire.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 InnovateX. All rights reserved.</p>
+        <p><a href="https://www.innovatex.com">Visit Our Website</a></p> <!-- Added website link -->
+    </footer>
+</body>
+</html>
