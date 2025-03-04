@@ -1,0 +1,15 @@
+{
+    "schedule": [
+      {
+        "time": "09:00 AM",
+        "session": "Opening Keynote",
+        "track": "General"
+      },
+      {
+        "time": "10:30 AM",
+        "session": "AI and the Future",
+        "track": "AI"
+      }
+    ]
+  }
+  
