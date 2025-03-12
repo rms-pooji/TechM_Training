@@ -1,0 +1,12 @@
+<div class="books-container">
+    <h2 class="title">Books Collection</h2>
+    <div class="book-grid">
+      <div class="book-card" *ngFor="let book of books">
+        <h3>{{ book.title }}</h3>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Genre:</strong> {{ book.genre }}</p>
+        <p><strong>Rating:</strong> ⭐{{ book.rating }}</p>
+      </div>
+    </div>
+  </div>
+  

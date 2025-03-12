@@ -1,0 +1,12 @@
+<div class="comics-container">
+    <h2 class="title">Comics Collection</h2>
+    <div class="comic-grid">
+      <div class="comic-card" *ngFor="let comic of comics">
+        <h3>{{ comic.title }}</h3>
+        <p><strong>Author:</strong> {{ comic.author }}</p>
+        <p><strong>Genre:</strong> {{ comic.genre }}</p>
+        <p><strong>Rating:</strong> ⭐{{ comic.rating }}</p>
+      </div>
+    </div>
+  </div>
+  
