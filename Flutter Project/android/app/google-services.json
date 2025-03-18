@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "180028141684",
+    "project_id": "myfbapp-efa1b",
+    "storage_bucket": "myfbapp-efa1b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180028141684:android:97fffcdab8c14ae20be121",
+        "android_client_info": {
+          "package_name": "com.example.eventbite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ8j_sxtAVd9zbnkBJMcbxajnxTlR7ric"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180028141684:android:d108632f6e79dc4a0be121",
+        "android_client_info": {
+          "package_name": "com.example.firebase_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ8j_sxtAVd9zbnkBJMcbxajnxTlR7ric"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
